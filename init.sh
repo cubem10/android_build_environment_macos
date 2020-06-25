@@ -32,10 +32,10 @@ if [ ${yn} = 'y' ]; then
     # 마운트
     if [ $(ls android.dmg.sparseimage) = 'android.dmg.sparseimage' ]; then
         hdiutil attach ./android.dmg.sparseimage
-        echo "ulimit -S -n 1024 && hdiutil attach $(pwd)/android.dmg.sparseimage" >> ./mount.sh
+        echo 'ulimit -S -n 1024 && hdiutil attach $(dirname $0)/android.dmg.sparseimage' >> ./mount.sh
     elif [ $(ls android.dmg) = 'android.dmg' ]; then
         hdiutil attach ./android.dmg.sparseimage
-        echo "ulimit -S -n 1024 && hdiutil attach $(pwd)/android.dmg.sparseimage" >> ./mount.sh
+        echo 'ulimit -S -n 1024 && hdiutil attach $(dirname $0)/android.dmg.sparseimage' >> ./mount.sh
     else
         echo "ERROR: 마운트에 실패했습니다. 스크립트 제작자(첫발짝@디벨로이드)에게 문의해 주세요."
     fi
