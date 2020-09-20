@@ -37,7 +37,7 @@ if [ ${yn} = 'y' ]; then
         hdiutil attach ./android.dmg.sparseimage
         echo 'ulimit -S -n 1024 && hdiutil attach $(dirname $0)/android.dmg.sparseimage' >> ./mount.sh
     else
-        echo "ERROR: 마운트에 실패했습니다. 스크립트 제작자(첫발짝@디벨로이드)에게 문의해 주세요."
+        echo "ERROR: 마운트에 실패했습니다. 스크립트 제작자(cubem10)에게 문의해 주시거나 Issues 탭에 보고해 주세요."
     fi
     
     # mount.sh 실행권한 부여
